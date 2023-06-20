@@ -17,8 +17,10 @@ class _NotesAppState extends State<NotesApp> {
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.dark,
+        fontFamily: 'Poppins',
       ),
       home: const NoteView(
+
 
 
       ),
