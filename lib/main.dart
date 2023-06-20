@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/views/note_view.dart';
 
 void main() {
   runApp(const NotesApp());
@@ -13,7 +14,18 @@ class NotesApp extends StatefulWidget {
 class _NotesAppState extends State<NotesApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      home: const NoteView(
+
+
+      ),
+
+
+
+    );
   }
 }
 
