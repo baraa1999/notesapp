@@ -12,34 +12,34 @@ class NoteItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: const Color(0xffFFCC80),
       ),
-      child: const Column(
+      child:  Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Text('Flutter Tips',
+            title: const Text('Flutter Tips',
               style: TextStyle(
                 fontSize: 26,
                 color: Colors.black,
 
               ),),
-            subtitle: Padding(
-              padding: EdgeInsets.only(top: 16,bottom: 16),
+            subtitle:  Padding(
+              padding: const EdgeInsets.only(top: 16,bottom: 16),
               child: Text('Build your career baraa alian',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.black.withOpacity(.5),
                   fontSize: 18,
                 ),),
             ),
             trailing: IconButton(
               onPressed:(){
               },
-              icon: Icon(FontAwesomeIcons.trash,color: Colors.black,size: 24,
+              icon: const Icon(FontAwesomeIcons.trash,color: Colors.black,size: 24,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 24),
-            child: Text('May21, 2023',style: TextStyle(color: Colors.black,fontSize: 16),
+            padding: const EdgeInsets.only(right: 24),
+            child: Text('May21, 2023',style: TextStyle(color: Colors.black.withOpacity(.5),fontSize: 16),
             ),
           ),
         ],
