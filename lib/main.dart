@@ -15,6 +15,7 @@ class _NotesAppState extends State<NotesApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
         fontFamily: 'Poppins',
