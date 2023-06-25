@@ -42,7 +42,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLines: 5,
           ),
           const SizedBox(height: 32,),
-          CustomButton(
+          BlocBuilder<AddNotesCubit, AddNotesState>(
+          builder: (context, state) {
+           return CustomButton(
+            isLoading: state is AddNoteLoading ? true : false,
             onTap: (){
               if(formKey.currentState!.validate())
               {
@@ -58,7 +61,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 });
               }
             },
-          ),
+          );
+  },
+),
           const SizedBox(height: 16,),
         ],
       ),
