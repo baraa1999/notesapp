@@ -5,6 +5,7 @@ import 'package:notesapp/simple_block_observer.dart';
 import 'package:notesapp/views/note_view.dart';
 import 'constants.dart';
 import 'models/note_model.dart';
+import 'notes_cubit/notes_cubit.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -13,6 +14,7 @@ void main() async {
   await Hive.openBox<NoteModel>(kNotesBox);
   runApp(const NotesApp());
 }
+
 class NotesApp extends StatefulWidget {
   const NotesApp({super.key});
 
@@ -23,20 +25,21 @@ class NotesApp extends StatefulWidget {
 class _NotesAppState extends State<NotesApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        fontFamily: 'Poppins',
+    return BlocProvider(
+      create: (context) => NotesCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          fontFamily: 'Poppins',
+        ),
+        home: const NoteView(
+
+
+        ),
+
+
       ),
-      home: const NoteView(
-
-
-
-      ),
-
-
-
     );
   }
 }
