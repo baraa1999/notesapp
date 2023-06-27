@@ -31,7 +31,6 @@ class _AddNoteFormState extends State<AddNoteForm> {
               title = value;
             },
             hint: 'title',
-
           ),
           const SizedBox(
             height: 16,
@@ -43,11 +42,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hint: 'content',
             maxLines: 5,
           ),
-         const ColorListVeiw(),
           const SizedBox(
             height: 32,
           ),
-          const SizedBox(height: 32,),
+          const ColorListVeiw(),
+         const SizedBox(height: 32,),
           BlocBuilder<AddNotesCubit, AddNotesState>(
           builder: (context, state) {
            return CustomButton(
