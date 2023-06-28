@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:notesapp/add_note_cubit/add_notes_cubit.dart';
 import 'package:notesapp/models/note_model.dart';
-import 'color_list_view.dart';
 import 'custom_button.dart';
 import 'custom_text_field.dart';
+import 'edit_note_colors_list_view.dart';
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({super.key});
 
